@@ -87,11 +87,13 @@ textarea {
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   flex-direction: column;
   min-height: 100vh;
-  font-size: 1.5rem;
   background-color: #9eebcf;
+  font-size: 1.2em;
+  text-align: left;
+  padding: 20px;
 }
 
 /* ==========================================================================
