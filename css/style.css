@@ -85,15 +85,38 @@ textarea {
    ========================================================================== */
 
 body {
-  display: flex;
-  justify-content: center;
-  /* align-items: center; */
-  flex-direction: column;
-  min-height: 100vh;
   background-color: #9eebcf;
   font-size: 1.2em;
   text-align: left;
   padding: 20px;
+  min-height: 50vh;
+}
+
+body {
+  display: grid;
+  place-items: center; /* This centers items on both axes */
+}
+
+body > div {
+  max-width: 65ch;
+}
+
+.main-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font: 1.2em sans-serif;
+
+  display: flex;
+}
+
+.main-nav a {
+  padding: 0.5em 1em;
+  display: block;
+}
+
+.push {
+  margin-left: auto;
 }
 
 /* ==========================================================================
