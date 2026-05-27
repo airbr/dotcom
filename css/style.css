@@ -13,7 +13,6 @@
 
 html {
   color: #222;
-  font-size: 1em;
   line-height: 1.4;
 }
 
@@ -90,6 +89,7 @@ body {
   text-align: left;
   padding: 20px;
   min-height: 50vh;
+  overflow-wrap: break-word;
 }
 
 body {
@@ -97,7 +97,7 @@ body {
   place-items: center; /* This centers items on both axes */
 }
 
-body > div {
+body > main {
   max-width: 65ch;
 }
 
@@ -106,7 +106,7 @@ body > div {
   padding: 0;
   list-style: none;
   font: 1.2em sans-serif;
-
+  flex-wrap: wrap;
   display: flex;
 }
 
@@ -183,23 +183,6 @@ body > div {
   visibility: hidden;
 }
 
-/*
- * Clearfix: contain floats
- *
- * The use of `table` rather than `block` is only necessary if using
- * `::before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-  content: "";
-  display: table;
-}
-
-.clearfix::after {
-  clear: both;
-}
-
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
@@ -216,71 +199,3 @@ body > div {
   (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-}
-
