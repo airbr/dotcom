@@ -120,25 +120,65 @@ body {
 }
 
 .contact-form {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   font: 1.05em sans-serif;
   max-width: 100%;
+}
+
+.contact-form > * {
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .contact-form input {
   font: 1.05em sans-serif;
-  max-width: 100%;
-  min-width: 320px;
+  max-width: 300px;
+  width: 100%;
 }
 
 textarea {
   min-width: 200px;
-  max-width: 400px;
+  max-width: 50ch;
   font: 1.05em sans-serif;
   width: 100%;
 }
 
 button {
-  font-size: 1.4em;
+  max-width: 120px;
+  --button-bg: #342a21;
+  --button-color: #ffffff;
+  --button-hover-bg: #4b4b4a;
+  --button-hover-color: #ffffff;
+  --button-border-width: 3px;
+  --button-border-style: solid;
+  --button-border-color: var(--button-bg);
+  --button-radius: 0.5em;
+
+  display: inline-flex;
+  align-items: center;
+  gap: var(--button-gap, 0.5em);
+  padding: var(--button-padding, 0.7em 1.2em);
+
+  background: var(--button-bg);
+  color: var(--button-color);
+
+  border-width: var(--button-border-width);
+  border-style: var(--button-border-style);
+  border-color: var(--button-border-color);
+  border-radius: var(--button-radius);
+
+  text-decoration: none;
+  font-weight: var(--button-font-weight, 700);
+  font-size: var(--button-font-size, 1em);
+  letter-spacing: 0.05ch;
+  font-family: sans-serif;
+  line-height: 1.1; /* Set or buttons will be different sizes (<a>/<button>) */
+
+  cursor: pointer;
 }
 
 /* ==========================================================================
