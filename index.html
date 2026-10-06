@@ -44,13 +44,13 @@
     <h2>Get in touch</h2>    
     <form class="contact-form" name="new-form" method="POST" data-netlify="true">
       <p>
-        <label>Your Name: <input type="text" name="name" maxlength="50" autocomplete required /></label>
+        <label for="name">Your Name: <input id="name" type="text" name="name" maxlength="50" autocomplete="preferred-name" required /></label>
       </p>
       <p>
-        <label>Your Email: <input type="email" name="email" maxlength="50" autocomplete required/></label>
+        <label for="email">Your Email: <input id="email" type="email" name="email" maxlength="50" autocomplete="email" required/></label>
       </p>
       <p>
-        <label>Message: <br><textarea name="message" maxlength="600" required></textarea></label>
+        <label for="message">Message: <textarea id="message" name="message" maxlength="600" autocomplete="message" required></textarea></label>
       </p>
       <p>
         <button type="submit">Send</button>
