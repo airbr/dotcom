@@ -148,6 +148,7 @@ textarea {
 }
 
 button {
+  margin-top: 12px;
   max-width: 120px;
   --button-bg: #342a21;
   --button-color: #ffffff;
@@ -181,6 +182,21 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background: var(--button-hover-bg);
+  color: var(--button-hover-color);
+}
+
+button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline-width: 3px;
+  outline-style: solid;
+  outline-color: navy;
+  outline-offset: 3px
+}
+
+button:active {
+  transform: scale(.99);
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
