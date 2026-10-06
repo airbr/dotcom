@@ -120,12 +120,12 @@ body {
 }
 
 .contact-form {
-  font: 1.25em sans-serif;
+  font: 1.05em sans-serif;
   max-width: 100%;
 }
 
 .contact-form input {
-  font: 1.25em sans-serif;
+  font: 1.05em sans-serif;
   max-width: 100%;
   min-width: 320px;
 }
@@ -133,12 +133,12 @@ body {
 textarea {
   min-width: 200px;
   max-width: 400px;
-  font: 1.25em sans-serif;
+  font: 1.05em sans-serif;
   width: 100%;
 }
 
 button {
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 
 /* ==========================================================================
